@@ -5,3 +5,9 @@
     mode: '644'
     src: vector.j2
     dest: "/etc/vector/vector.yaml"
+- name: Start vector
+  become: true
+  ansible.builtin.service:
+    name: vector
+    enabled: true
+    state: restarted

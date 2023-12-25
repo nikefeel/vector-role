@@ -14,9 +14,3 @@
     - Start vector
 - name: Flush handlers
   ansible.builtin.meta: flush_handlers
-- name: Start vector
-  become: true
-  ansible.builtin.service:
-    name: vector
-    enabled: true
-    state: restarted
