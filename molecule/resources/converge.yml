@@ -21,12 +21,7 @@
       ansible.builtin.copy:
         src: /systemctl.py
         remote_src: true
+        remote_src: true
         dest: /usr/bin/systemctl
         mode: "+x"
         force: true
-  tasks:
-    - name: "Include vector-role"
-      ansible.builtin.include_role:
-        name: "vector-role"
-      vars:
-        vector_config_path: "/etc/vector"
