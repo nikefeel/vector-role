@@ -7,7 +7,7 @@
     dest: "/etc/vector/vector.yaml"
 - name: Start vector
   become: true
-  ansible.builtin.service:
+  ansible.builtin.systemd:
     name: vector
-    enabled: true
     state: restarted
+    

@@ -1,5 +1,5 @@
 ---
-- hosts: vector
-  remote_user: feel
+- hosts: localhost
+  remote_user: root
   roles:
     - vector-role

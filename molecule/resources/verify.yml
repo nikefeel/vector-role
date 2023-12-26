@@ -1,0 +1,17 @@
+---
+- name: Verify vector installation
+  hosts: all
+  gather_facts: false 
+  tasks:
+  - name: Get information about vector
+    ansible.builtin.command: systemctl show vector
+    register: srv_res
+    changed_when: false
+  - name: Assert vector service
+    ansible.builtin.assert:
+      that:
+       - srv_res.rc == 0
+       - "'ActiveState=active' in srv_res.stdout_lines"
+       - "'LoadState=loaded' in srv_res.stdout_lines"
+       - "'SubState=running' in srv_res.stdout_lines"
+
