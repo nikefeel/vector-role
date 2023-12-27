@@ -3,9 +3,6 @@ dependency:
   name: galaxy
 driver:
   name: docker
-  options:
-    D: true
-    vv: true
 platforms:
   - name: fedora
     image: docker.io/pycontribs/fedora:latest
@@ -15,9 +12,6 @@ platforms:
     pre_build_image: true
 provisioner:
   name: ansible
-  options:
-    D: true
-    vv: true
   playbooks:
     converge: ../resources/converge.yml
     verify: ../resources/verify.yml
