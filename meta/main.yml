@@ -18,6 +18,6 @@ galaxy_info:
         - latest
 
   galaxy_tags:
-    - vector-role
+    - vector
 
 dependencies: []
