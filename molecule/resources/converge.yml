@@ -26,9 +26,9 @@
         mode: "+x"
         force: true
   tasks:
-  - name: "Include vector-role"
+  - name: Include vector-role
     ansible.builtin.include_role:
-      name: "vector-role"
+      name: vector-role
     vars:
       vector_config_path: "/etc/vector"
 
