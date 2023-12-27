@@ -28,7 +28,7 @@
   tasks:
   - name: Include vector-role
     ansible.builtin.include_role:
-      name: feel.vector-role
+      name: feel.vector_role
     vars:
       vector_config_path: "/etc/vector"
 
