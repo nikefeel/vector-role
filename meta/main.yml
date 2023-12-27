@@ -1,5 +1,6 @@
 galaxy_info:
-  role_name: vector-role
+  role_name: vector_role
+  namespace: feel
   author: Nike Feel
   description: This role for install Vector on EL
   company: Netology
